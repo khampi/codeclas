@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a = in.nextInt();
+        if (in.hasNextLine()) {
+            in.nextLine();
+        }
+        String symbol = in.nextLine();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=0;j<=a;j++)
+            {
+                System.out.print(" ");
+            }
+            a++;
+                for(int k=1;k<=i;k++)
+                System.out.print(symbol);
+
+            System.out.println("");
+        }
+
+        // Write an answer using System.out.println()
+        // To debug: System.err.println("Debug messages...");
+
+        
+    }
+}
