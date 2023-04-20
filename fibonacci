@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        int y = in.nextInt();
+       int[] f=new int[36];
+       f[0]=0;
+       f[1]=1;
+      for (int i=2; i<36;i++) 
+      {
+        f[i] = f[i-1]+f[i-2];
+        }
+    for (int i=x; i<=y;i++) {
+        
+        System.out.print(f[i]);
+        if(i!=y)
+        {
+            System.out.print(" ");
+        }
+    }
+}
+}
