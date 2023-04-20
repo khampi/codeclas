@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        if (in.hasNextLine()) {
+            in.nextLine();
+        }
+        int c=0;
+        for (int i = 0; i < n; i++) {
+            String instrument = in.nextLine();
+            if(instrument.equals("guitar"))
+            {
+            c++;
+            if(c%2!=0)
+            System.out.println("plinx");
+            else
+            System.out.println("plonx");
+            }
+            if(instrument.equals("drums"))
+            {
+                if(i<n-1)
+              System.out.println("badum");
+              else
+              System.out.print("tss");
+            }
+    }
+}
+}
