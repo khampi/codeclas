@@ -1,0 +1,49 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int width = in.nextInt();
+        int height = in.nextInt();
+        String corner = in.next();
+        String verticalSides = in.next();
+        String horizontalSides = in.next();
+        String composition = in.next();
+        for(int i=0;i<height;i++)
+        {
+            for(int j=0;j<width;j++)
+            {
+                if((i==0&&j==0)||i+(width-1)==j||j+(height-1)==i||(i==(height-1)&&j==(width-1)))
+                System.out.print(corner);
+                else if(j==0||j==(width-1))
+                System.out.print(verticalSides);
+                else if(i==0||i==(height-1))
+                System.out.print(horizontalSides);
+                else
+                System.out.print(composition);
+
+            }
+            System.out.println("");
+        }
+
+        // Write an answer using System.out.println()
+        // To debug: System.err.println("Debug messages...");
+
+        
+    }
+}
+
+///output
+
+#---#
+|***|
+|***|
+|***|
+#---#
